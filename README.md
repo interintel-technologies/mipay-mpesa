@@ -64,8 +64,8 @@ base64 decoded *API key* is the shared secret key used for generating the HMAC v
 #### params
 * MSISDN
 message recipient
-* message
-the message to send
+* product_id
+the product to send money to (B2B|B2C)
 * scheduled_send 
 format = "17/09/2016 6:31 am" (d/m/Y H:M (am/pm))
 
