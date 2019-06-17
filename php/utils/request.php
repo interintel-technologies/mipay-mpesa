@@ -1,11 +1,11 @@
 <?php
-define ('URL', 'services.interintel.co');
+define ('URL', 'gomipay.com');
 define ('HOST', '<<YOUR HOST IP ADDRESS (ipv4|ipv6)>>');
 
 function init_payload(){
 	$payload = array();
 
-	$payload['CHID'] = '4';
+	$payload['CHID'] = '13';
 	$payload['timestamp'] = time();
 	$payload['ip_address'] = HOST;
 	$payload['gateway_host'] = URL;

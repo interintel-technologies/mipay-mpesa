@@ -16,7 +16,7 @@ M-PESA MIPAY Api
 constants parameters to include in all requests
 
 ```
-CHID = 11;
+CHID = 13;
 gateway_host = gomipay.com;
 lat = '0.0'
 lng = '0.0'
