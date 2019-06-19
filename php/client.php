@@ -12,7 +12,7 @@ function send_money($msisdn,$amount,$payment_method,$transid="", $schedule="", $
         $credentials['username'] = USERNAME;
         $credentials['password'] = PASSWORD;
         $payload["credentials"] = $credentials;
-        $payload["account_number"] = $msisdn;
+        $payload["msisdn"] = $msisdn; //For B2C //B2B$payload["business_number"] = $msisdn;
         $payload["amount"] = $amount;
         $payload["currency"] = 'KES';
         $payload["institution_id"] = $institution_id;
