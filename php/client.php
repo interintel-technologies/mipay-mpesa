@@ -28,7 +28,7 @@ function send_money($msisdn,$amount,$payment_method,$transid="", $schedule="", $
         return request($payload, 'REMIT');
 }
 //C2B Prompt
-function sale _request($msisdn,$amount,$payment_method,$transid="",$institution_id,$product_id){
+function sale_request($msisdn,$amount,$payment_method,$transid="",$institution_id,$product_id){
         $payload = init_payload();
         $credentials = array();
         $credentials['username'] = USERNAME;
