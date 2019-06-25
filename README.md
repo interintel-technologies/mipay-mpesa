@@ -80,3 +80,21 @@ message accompanying the status
 
 
 
+# M-PESA C2B
+
+#### Checkout
+A `reference` is used to make a request
+To obtain a `reference`,   
+a service user must have made a prior service request (SALE ORDER) to obtain a reference to use in 
+the request.   
+A reference can only be used once and would no longer be accessible once a payment is made
+
+
+#### Sale
+To obtain `product_item_id`, the service user would be issued with the `product_item_id` Identifying the  
+product for sale and can be used repeatedly to make  multiple sales of different amounts with different users.
+
+
+#### Order
+To obtain `cart_items`, the service (`ADD TO CART`) must have been done, and the items on cart obtained, 
+
