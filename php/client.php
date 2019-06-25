@@ -59,7 +59,7 @@ $result = sale_request("+2547XXXXXXXX","10","M-PESA","MYTRANSID","MYINSTID","PRO
 //TRANSACTION_ID|SCHEDULED_SEND are optional
 //A transaction can be referenced using the reference number number which is part of the result or the optional transaction id if was part of the request
 //INSTITUTION ID and PRODUCT ID will be gotten from your account details
-$result = send_money("+2547XXXXXXXX","10","M-PESA","MYTRANSID","17/09/2016 6:31 am","MYINSTID","PRODUCTID(B2B|B2C)");
+#$result = send_money("+2547XXXXXXXX","10","M-PESA","MYTRANSID","17/09/2016 6:31 am","MYINSTID","PRODUCTID(B2B|B2C)");
 
 $payload = (array) json_decode($result);
 print_r($payload);
