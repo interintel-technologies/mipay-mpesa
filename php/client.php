@@ -27,6 +27,33 @@ function send_money($msisdn,$amount,$payment_method,$transid="", $schedule="", $
         print "|||||||||||||||||||||||||||||||||";
         return request($payload, 'REMIT');
 }
+//C2B Prompt
+function sale _request($msisdn,$amount,$payment_method,$transid="",$institution_id,$product_id){
+        $payload = init_payload();
+        $credentials = array();
+        $credentials['username'] = USERNAME;
+        $credentials['password'] = PASSWORD;
+        $payload["credentials"] = $credentials;
+        $payload["msisdn"] = $msisdn;
+        $payload["amount"] = $amount;
+        $payload["currency"] = 'KES';
+        $payload["institution_id"] = $institution_id; m
+	$payload['product_item_id'] = $product_id; //
+        $payload["payment_method"] = $payment_method; //Payment M-PESA|MIPAY
+        $payload["ext_outbound_id"] = $transid;
+        print_r($payload);
+        print "|||||||||||||||||||||||||||||||||";
+        $payload = security($payload, API_KEY);
+        print_r($payload);
+        print "|||||||||||||||||||||||||||||||||";
+        return request($payload, 'SALE');
+}
+
+
+//*************************SALE REQUEST************************************
+//$result = sale_request(MSISDN,AMOUNT,PAYMENT_METHOD,TRANSACTION_ID,INSTTITUTION_ID,PRODUCT ID);
+
+$result = sale_request("+2547XXXXXXXX","10","M-PESA","MYTRANSID","MYINSTID","PRODUCTID(C2B/eCommerce)");
 
 //*************************SEND MONEY*****************************
 //TRANSACTION_ID|SCHEDULED_SEND are optional
